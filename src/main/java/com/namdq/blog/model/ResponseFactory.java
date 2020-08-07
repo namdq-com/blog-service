@@ -10,4 +10,9 @@ public class ResponseFactory {
         GeneralResponse<Object> response = new GeneralResponse<>(status, data);
         return ResponseEntity.ok(response);
     }
+
+    public static ResponseEntity<EmptyResponse> fail(ResponseStatus status) {
+        EmptyResponse response = new EmptyResponse(status);
+        return ResponseEntity.ok(response);
+    }
 }
